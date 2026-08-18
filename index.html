@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ayden">
+  <title>Ayden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <span>Ayden</span>
+      </div>
+
+      <button class="new-chat" id="newChat" type="button">+ New chat</button>
+
+      <nav class="side-nav" aria-label="Primary">
+        <button class="nav-item" type="button" id="settingsBtn">Settings</button>
+      </nav>
+
+      <div class="settings-panel" id="settingsPanel">
+        <label>api key
+          <input type="password" id="cfg-key" placeholder="gsk_..." autocomplete="off">
+        </label>
+        <label>api url
+          <input type="url" id="cfg-url" placeholder="https://api.groq.com/openai/v1/chat/completions">
+        </label>
+        <label>model
+          <input type="text" id="cfg-model" placeholder="openai/gpt-oss-20b">
+        </label>
+        <div class="settings-actions">
+          <button type="button" id="cfg-save">Save</button>
+          <button type="button" class="ghost" id="cfg-presets">Groq defaults</button>
+          <button type="button" class="ghost" id="cfg-clear">Clear key</button>
+        </div>
+        <p class="settings-hint">key stays in this browser only. free key: console.groq.com/keys</p>
+      </div>
+
+      <div class="sidebar-spacer"></div>
+      <div class="side-note">
+        <div class="status-dot"></div>
+        <div>
+          <strong id="statusLabel">add api key</strong>
+          <small>local only</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="model-name">Ayden</div>
+        <button class="top-action" id="themeBtn" type="button" title="Toggle theme">◐</button>
+      </header>
+
+      <section class="chat-shell" id="chatShell">
+        <div class="welcome" id="welcome">
+          <div class="hero-mark">A</div>
+          <h1>yo wsp</h1>
+          <p>say anything</p>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <form class="composer-wrap" id="composer">
+        <div class="composer">
+          <textarea id="prompt" rows="1" placeholder="Message Ayden..." aria-label="Message Ayden"></textarea>
+          <button class="send" type="submit" aria-label="Send">↑</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
