@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ayden</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="logo" href="/"><span class="logo-mark">A</span><span>ayden</span></a>
+      <button class="ghost mobile-close" id="close-sidebar">×</button>
+    </div>
+    <button class="new-chat" id="new-chat">＋ <span>New chat</span><kbd>Ctrl K</kbd></button>
+    <div class="history-label">Chats</div>
+    <div class="chat-list" id="chat-list"></div>
+    <div class="sidebar-fill"></div>
+    <button class="sidebar-button" id="settings-open">⚙ <span>Settings</span></button>
+    <div class="profile">
+      <div class="avatar" id="avatar">A</div>
+      <div><strong id="profile-name">Ayden</strong><small id="profile-email"></small></div>
+      <button class="logout" id="logout" title="Log out">↪</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="ghost menu" id="open-sidebar">☰</button>
+      <div class="model">Ayden <span>⌄</span></div>
+      <div class="top-actions"><span class="connection" id="connection"><i></i><span>ready</span></span></div>
+    </header>
+
+    <section class="chat" id="chat">
+      <div class="welcome" id="welcome">
+        <div class="welcome-logo">A</div>
+        <h1>What can I help with?</h1>
+        <p>Ask Ayden anything.</p>
+        <div class="prompts">
+          <button data-prompt="give me a quick idea for something fun to do today"><b>Something fun</b><span>give me an idea</span></button>
+          <button data-prompt="explain something complicated in simple terms"><b>Explain something</b><span>make it simple</span></button>
+          <button data-prompt="help me write a short, natural message"><b>Write something</b><span>keep it natural</span></button>
+          <button data-prompt="tell me a random interesting fact"><b>Surprise me</b><span>random fact</span></button>
+        </div>
+      </div>
+      <div class="messages" id="messages"></div>
+    </section>
+
+    <div class="composer-area">
+      <form class="composer" id="composer">
+        <textarea id="input" rows="1" maxlength="10000" placeholder="Message Ayden..." required></textarea>
+        <button class="send" id="send" type="submit">↑</button>
+      </form>
+      <div class="hint">Ayden can make mistakes. Check important info.</div>
+    </div>
+  </main>
+</div>
+
+<dialog class="settings" id="settings">
+  <div class="settings-head"><div><small>ACCOUNT</small><h2>Settings</h2></div><button class="ghost" id="settings-close">×</button></div>
+  <div class="account-card">
+    <div class="avatar big" id="settings-avatar">A</div>
+    <div><strong id="settings-name">Ayden</strong><span id="settings-email"></span></div>
+  </div>
+  <button class="secondary full" id="logout-settings">Log out</button>
+</dialog>
+
+<script src="/app.js"></script>
+</body>
+</html>
