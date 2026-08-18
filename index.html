@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ayden">
+  <title>Ayden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark">
+  <!-- LOGIN -->
+  <div class="auth" id="authScreen">
+    <div class="auth-card glow-card">
+      <div class="auth-logo">A</div>
+      <h1 id="authTitle">Welcome</h1>
+      <p class="auth-sub" id="authSub">create an account to continue</p>
+
+      <form id="authForm">
+        <div class="auth-row" id="nameRow">
+          <input type="text" id="firstName" placeholder="First name" required>
+          <input type="text" id="lastName" placeholder="Last name" required>
+        </div>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required minlength="4">
+        <input type="date" id="birthday" required>
+        <button type="submit" id="authSubmit">Continue</button>
+      </form>
+      <p class="auth-switch">
+        <span id="switchText">already have an account?</span>
+        <button type="button" id="switchMode">Log in</button>
+      </p>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div class="app" id="appScreen" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="side-top">
+        <div class="side-header">
+          <button class="collapse-btn" id="collapseBtn" type="button" title="Collapse sidebar">‹</button>
+          <span class="side-brand">Ayden</span>
+        </div>
+
+        <button class="new-chat" id="newChat" type="button">
+          <span class="icon">✎</span> <span class="label">New chat</span>
+        </button>
+
+        <div class="history-label">Chats</div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+
+      <div class="side-bottom">
+        <button class="nav-item" type="button" id="settingsBtn">
+          <span class="icon">⚙</span> <span class="label">Settings</span>
+        </button>
+        <div class="user-chip" id="userChip">
+          <div class="user-avatar" id="userAvatar">A</div>
+          <div class="user-meta">
+            <strong id="userName">User</strong>
+            <small id="userEmail">—</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <button class="expand-btn" id="expandBtn" type="button" title="Open sidebar" hidden>›</button>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Menu">☰</button>
+        <div class="brand-inline">Ayden</div>
+      </header>
+
+      <section class="chat-shell">
+        <div class="welcome" id="welcome">
+          <h1>Where should we begin?</h1>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <form class="composer-wrap" id="composer">
+        <div class="composer glow-input">
+          <button type="button" class="plus-btn" disabled>+</button>
+          <textarea id="prompt" rows="1" placeholder="Ask anything" aria-label="Message"></textarea>
+          <button class="send" type="submit" aria-label="Send">↑</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="modal" id="settingsModal" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card glow-card">
+      <div class="modal-head">
+        <h2>Settings</h2>
+        <button type="button" class="close-btn" id="closeSettings">✕</button>
+      </div>
+
+      <div class="modal-section">
+        <h3>Appearance</h3>
+        <button type="button" class="setting-row" id="themeToggle">
+          <span>Theme</span>
+          <span class="setting-value" id="themeLabel">Dark</span>
+        </button>
+      </div>
+
+      <div class="modal-section">
+        <h3>Account</h3>
+        <button type="button" class="setting-row danger" id="logoutBtn">
+          <span>Log out</span>
+        </button>
+      </div>
+
+      <p class="hint">api key & personality are set in <code>config.js</code> (same for everyone)</p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
