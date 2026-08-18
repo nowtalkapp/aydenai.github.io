@@ -1,7 +1,0 @@
-{
-  "name":"ayden-ai",
-  "version":"1.0.0",
-  "private":true,
-  "scripts":{"start":"node server.js","dev":"node server.js"},
-  "dependencies":{"better-sqlite3":"^11.10.0","cookie-parser":"^1.4.7","dotenv":"^17.2.1","express":"^5.1.0"}
-}
