@@ -5,7 +5,7 @@
 
 window.AYDEN_CONFIG = {
   // API
-  API_KEY: "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",
+  API_KEY: "test_key-9ue38Fj9R25_3g3grm743g4Hl01",
   API_URL: "https://api.groq.com/openai/v1/chat/completions",
   MODEL: "openai/gpt-oss-20b",
 
